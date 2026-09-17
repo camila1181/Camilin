@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Usuarios</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Librería PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <h2 class="text-center">Lista de Usuarios</h2>
+
+    <!-- BOTONES -->
+    <div class="text-end mb-3">
+        <button class="btn btn-success" onclick="exportarExcel()">Excel</button>
+        <button class="btn btn-danger" onclick="exportarPDF()">PDF</button>
+        <button class="btn btn-primary" onclick="exportarWord()">Word</button>
+    </div>
+
+    <!-- TABLA -->
+    <table class="table table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaUsuarios"></tbody>
+    </table>
+
+</div>
+
+<script src="../js/script_crud_admin.js"></script>
+
+<script>
+    window.onload = listarUsuarios;
+</script>
+
+</body>
+</html>
